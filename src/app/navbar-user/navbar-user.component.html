@@ -1,0 +1,82 @@
+
+  <mat-toolbar style="background-color:rgba(255, 255, 255, 0.671);border:1px solid rgb(212, 200, 200)">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <span> <a class="navbar-brand" href="#">
+        <img src="../../assets/logo cariiery.png" alt="Logo" width="20%">
+      </a> </span>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+       
+        <a href="#" mat-button>
+          <mat-icon color="warn">home</mat-icon>
+          Home
+        </a>
+        <a href="/resume" mat-button>
+          <mat-icon color="primary">description</mat-icon>
+          Resume
+        </a>
+        <a href="/motivationLetter" mat-button>
+          <mat-icon color="primary">mail</mat-icon>
+          Motivation Letter
+        </a>
+        <a href="/coachList" mat-button>
+          <mat-icon color="primary">devices</mat-icon>
+Video Consultation        </a>
+        
+         
+        <a href="/profile" mat-button>
+          <mat-icon color="primary">account_box</mat-icon>
+          My Account
+        </a>
+        <a href="#"  mat-button class="notification">
+          <mat-icon  color="primary" matBadge="3" matBadgeColor="warn" matBadgeSize="small">notifications</mat-icon>
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a href="#" mat-list-item>
+          <mat-icon color="warn">home</mat-icon>
+          Home
+        </a>
+        <a href="/resume" mat-list-item>
+          <mat-icon color="primary">description</mat-icon>
+          Resume
+        </a>
+        <a href="/motivationLetter" mat-list-item>
+          <mat-icon color="primary">mail</mat-icon>
+          Motivation Letter
+        </a>
+        <a href="/coachList" mat-list-item>
+          <mat-icon color="primary">devices</mat-icon>
+Video Consultation        </a>
+        
+         
+        <a href="/resume" mat-list-item>
+          <mat-icon color="primary">account_box</mat-icon>
+          My Account
+        </a>
+        <a href="#"  mat-list-item class="notification">
+          <mat-icon color="primary" matBadge="1" matBadgeSize="small" matBadgeColor="primary">notifications</mat-icon>
+          <span>notifications</span>
+        </a>
+        <a (click)="sidenav.toggle()" mat-list-item>
+          <mat-icon>close</mat-icon> Close
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill >
+
+content   
+    
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
